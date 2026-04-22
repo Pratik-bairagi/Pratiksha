@@ -1,106 +1,112 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pratiksha Herbals | Authentic Ayurvedic Care</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratiksha Herbals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6b8e23;
+      --secondary: #f5f5dc;
+      --text: #333;
+      --white: #ffffff;
+    }body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.navbar h2 { color: var(--primary); }
+
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1597848212624-e6ac3a6b3e2c');
+  background-size: cover;
+  color: white;
+}
+
+.hero h1 { font-size: 48px; }
+
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+section { padding: 60px 20px; }
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+  </style>
 </head>
-<body>
-
-    <div class="announcement">
-        Free Shipping on orders above ₹499 | 100% Pure & Handmade
+<body>  <div class="navbar">
+    <h2>Pratiksha Herbals</h2>
+    <div>Home | Products | Contact</div>
+  </div>  <div class="hero">
+    <div>
+      <h1>Natural Beauty with Herbal Care</h1>
+      <button class="btn">Shop Now</button>
     </div>
+  </div>  <section>
+    <h2 style="text-align:center;">Our Products</h2>
+    <div class="products"><div class="product-card">Keshveda Herbal Kaali-Mitti (Hair)</div>
+  <div class="product-card">Narang Orange Peel Powder (Face)</div>
+  <div class="product-card">Nikhar Herbal Face Pack</div>
+  <div class="product-card">Neemveda Neem Powder</div>
+  <div class="product-card">Multani Mitti Face Pack</div>
+  <div class="product-card">Vibha Skin Detoxifier</div>
+  <div class="product-card">Sanjivani Neem Face Pack</div>
+  <div class="product-card">Somya Herbal Face Pack</div>
+  <div class="product-card">Sparsh Summer Ubtan</div>
 
-    <header>
-        <nav>
-            <div class="logo">PRATIKSHA HERBALS</div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#products">Shop All</a></li>
-                <li><a href="#about">Our Heritage</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+</div>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h4>Traditional Wisdom, Modern Care</h4>
-            <h1>Handmade With Love & Herbs</h1>
-            <p>Experience the purity of nature with our curated herbal collections.</p>
-            <a href="#products" class="btn-primary">Shop The Collection</a>
-        </div>
-    </section>
-
-    <section id="products" class="shop-section">
-        <h2 class="section-title">Our Best Sellers</h2>
-        <p class="section-subtitle">Pure Ayurvedic Formulations for Hair & Skin</p>
-        
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="img-container">
-                    <img src="images/keshveda.jpg" alt="Keshveda">
-                </div>
-                <h3>Keshveda Herbal Black Soil</h3>
-                <p class="category">Hair Care</p>
-                <p class="price">₹299.00</p>
-                <button class="order-btn" onclick="orderOnWhatsApp('Keshveda', '₹299')">Quick Buy</button>
-            </div>
-
-            <div class="product-card">
-                <div class="img-container">
-                    <img src="images/nikhar.jpg" alt="Nikhar">
-                    <span class="badge">Bestseller</span>
-                </div>
-                <h3>Nikhar Herbal Face Pack</h3>
-                <p class="category">Skin Care</p>
-                <p class="price">₹249.00</p>
-                <button class="order-btn" onclick="orderOnWhatsApp('Nikhar', '₹249')">Quick Buy</button>
-            </div>
-
-            <div class="product-card">
-                <div class="img-container">
-                    <img src="images/sparsh.jpg" alt="Sparsh">
-                </div>
-                <h3>Sparsh Herbal Summer Ubtan</h3>
-                <p class="category">Skin Care</p>
-                <p class="price">₹259.00</p>
-                <button class="order-btn" onclick="orderOnWhatsApp('Sparsh', '₹259')">Quick Buy</button>
-            </div>
-            
-            </div>
-    </section>
-
-    <section id="about" class="about-premium">
-        <div class="about-text">
-            <h2>The Pratiksha Herbals Philosophy</h2>
-            <p>We source only the finest botanical ingredients, ensuring every product is free from harsh chemicals, parabens, and sulfates. Our mission is to revive ancient Ayurvedic rituals for the modern world.</p>
-            <img src="images/signature.png" alt="Handmade Guarantee" style="width: 100px; margin-top: 20px;">
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-grid">
-            <div>
-                <h3>Pratiksha Herbals</h3>
-                <p>Pure. Natural. Authentic.</p>
-            </div>
-            <div>
-                <h3>Support</h3>
-                <p>Track Order</p>
-                <p>Shipping Policy</p>
-            </div>
-            <div>
-                <h3>Connect</h3>
-                <p>Instagram</p>
-                <p>Facebook</p>
-            </div>
-        </div>
-        <p class="copyright">&copy; 2026 Pratiksha Herbals | Powered by Ayurvedic Wisdom</p>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
+  </section>  <section>
+    <h2 style="text-align:center;">About Us</h2>
+    <p style="text-align:center; max-width:600px; margin:auto;">
+      Pratiksha Herbals provides 100% natural and herbal beauty products made with love and purity for your skin and hair care.
+    </p>
+  </section>  <footer>
+    © 2026 Pratiksha Herbals | All Rights Reserved
+  </footer></body>
 </html>
