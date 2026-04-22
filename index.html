@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Pratiksha Herbals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Razorpay -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
   <h2>Pratiksha Herbals</h2>
   <div>Cart 🛒 <span id="cart-count">0</span></div>
 </div>
 
+<!-- HERO -->
 <div class="hero">
   <div>
     <h1>Glow Naturally with Herbal Care</h1>
@@ -20,40 +28,60 @@
   </div>
 </div>
 
+<!-- PRODUCTS -->
 <section>
-  <h2 style="text-align:center;">Our Products</h2>
+  <h2>Our Products</h2>
 
   <div class="products">
 
     <div class="product-card">
       <h3>Keshveda Kaali Mitti</h3>
-      <button class="btn" onclick="addToCart('Keshveda')">Add to Cart</button>
+      <button onclick="addToCart('Keshveda Kaali Mitti')" class="btn">Add to Cart</button>
     </div>
 
     <div class="product-card">
       <h3>Narang Orange Peel</h3>
-      <button class="btn" onclick="addToCart('Orange Peel')">Add to Cart</button>
+      <button onclick="addToCart('Orange Peel')" class="btn">Add to Cart</button>
     </div>
 
     <div class="product-card">
       <h3>Nikhar Face Pack</h3>
-      <button class="btn" onclick="addToCart('Nikhar')">Add to Cart</button>
+      <button onclick="addToCart('Nikhar Face Pack')" class="btn">Add to Cart</button>
     </div>
 
     <div class="product-card">
       <h3>Neemveda Powder</h3>
-      <button class="btn" onclick="addToCart('Neemveda')">Add to Cart</button>
+      <button onclick="addToCart('Neemveda')" class="btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Multani Mitti</h3>
+      <button onclick="addToCart('Multani Mitti')" class="btn">Add to Cart</button>
     </div>
 
   </div>
 </section>
 
-<section id="cart-section">
-  <h2 style="text-align:center;">Your Cart</h2>
-  <ul id="cart-items"></ul>
-  <button class="btn" onclick="checkout()">Checkout</button>
+<!-- CHECKOUT -->
+<section>
+  <h2>Checkout</h2>
+
+  <form onsubmit="placeOrder(event)">
+    <input type="text" id="name" placeholder="Full Name" required><br>
+    <input type="text" id="phone" placeholder="Phone" required><br>
+    <input type="text" id="address" placeholder="Address" required><br>
+
+    <button type="submit" class="btn">Place Order</button>
+  </form>
+
+  <br>
+
+  <button onclick="payNow()" class="btn">Pay Online</button>
+  <button onclick="sendWhatsApp()" class="btn">Order on WhatsApp</button>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
   © 2026 Pratiksha Herbals
 </footer>
