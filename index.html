@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pratiksha Herbals</title>
 
-<link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -14,40 +13,49 @@
 <!-- NAVBAR -->
 <header class="navbar">
   <h2>Pratiksha Herbals</h2>
-  <div>Cart 🛒 <span id="cart-count">0</span></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <div>
-    <h1>Glow Naturally with Herbal Care</h1>
-    <p>Pure • Natural • Ayurvedic</p>
+  <div class="hero-text">
+    <h1>Pure Herbal Care for Skin & Hair</h1>
+    <p>100% Natural | Ayurvedic | Chemical-Free</p>
     <button class="btn">Shop Now</button>
   </div>
 </section>
 
 <!-- PRODUCTS -->
-<section class="products-section">
+<section id="products">
   <h2>Our Products</h2>
 
-  <div class="products">
+  <div class="product-grid">
 
-    <div class="card">
+    <div class="product">
+      <img src="images/product1.jpg">
       <h3>Keshveda Kaali Mitti</h3>
       <button onclick="addToCart('Keshveda')" class="btn">Add to Cart</button>
     </div>
 
-    <div class="card">
+    <div class="product">
+      <img src="images/product2.jpg">
       <h3>Narang Orange Peel</h3>
       <button onclick="addToCart('Orange Peel')" class="btn">Add to Cart</button>
     </div>
 
-    <div class="card">
+    <div class="product">
+      <img src="images/product3.jpg">
       <h3>Nikhar Face Pack</h3>
       <button onclick="addToCart('Nikhar')" class="btn">Add to Cart</button>
     </div>
 
-    <div class="card">
+    <div class="product">
+      <img src="images/product4.jpg">
       <h3>Neemveda Powder</h3>
       <button onclick="addToCart('Neemveda')" class="btn">Add to Cart</button>
     </div>
@@ -55,24 +63,24 @@
   </div>
 </section>
 
-<!-- CHECKOUT -->
-<section class="checkout">
-  <h2>Checkout</h2>
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Pratiksha Herbals</h2>
+  <p>
+    We provide pure herbal and Ayurvedic products made with natural ingredients 
+    to enhance your skin and hair health.
+  </p>
+</section>
 
-  <form onsubmit="placeOrder(event)">
-    <input type="text" id="name" placeholder="Full Name" required>
-    <input type="text" id="phone" placeholder="Phone" required>
-    <input type="text" id="address" placeholder="Address" required>
-
-    <button class="btn">Place Order</button>
-  </form>
-
-  <button onclick="sendWhatsApp()" class="btn whatsapp">Order on WhatsApp</button>
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <button onclick="sendWhatsApp()" class="btn">Order on WhatsApp</button>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  © 2026 Pratiksha Herbals | Natural Beauty
+  © 2026 Pratiksha Herbals | All Rights Reserved
 </footer>
 
 <script src="script.js"></script>
