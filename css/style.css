@@ -143,12 +143,12 @@ a:focus {
 }
 
 .navbar-brand img {
-  width: 45px;
+  width: 150px;
   margin-right: 5px;
 }
 
 .navbar-brand span {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 700;
   color: #2e2e2d;
   margin-top: 5px;
