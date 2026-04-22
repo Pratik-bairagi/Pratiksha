@@ -1,8 +1,8 @@
 let cart = [];
 
 function addToCart(product) {
-  cart.push(product);
-  alert(product + " added to cart");
+  localStorage.setItem("cartItem", product);
+  window.location.href = "cart.html";
 }
 
 function sendWhatsApp() {
