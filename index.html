@@ -2,98 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pratiksha Herbals</title>
-
-  <!-- CSS Link -->
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <div class="navbar">
-    <h2>Pratiksha Herbals</h2>
-    <div>
-      Home | Products | Contact
-    </div>
+<div class="navbar">
+  <h2>Pratiksha Herbals</h2>
+  <div>Cart 🛒 <span id="cart-count">0</span></div>
+</div>
+
+<div class="hero">
+  <div>
+    <h1>Glow Naturally with Herbal Care</h1>
+    <button class="btn">Shop Now</button>
   </div>
+</div>
 
-  <!-- Hero Section -->
-  <div class="hero">
-    <div>
-      <h1>Natural Beauty with Herbal Care</h1>
-      <button class="btn">Shop Now</button>
+<section>
+  <h2 style="text-align:center;">Our Products</h2>
+
+  <div class="products">
+
+    <div class="product-card">
+      <h3>Keshveda Kaali Mitti</h3>
+      <button class="btn" onclick="addToCart('Keshveda')">Add to Cart</button>
     </div>
+
+    <div class="product-card">
+      <h3>Narang Orange Peel</h3>
+      <button class="btn" onclick="addToCart('Orange Peel')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Nikhar Face Pack</h3>
+      <button class="btn" onclick="addToCart('Nikhar')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Neemveda Powder</h3>
+      <button class="btn" onclick="addToCart('Neemveda')">Add to Cart</button>
+    </div>
+
   </div>
+</section>
 
-  <!-- Products Section -->
-  <section>
-    <h2 style="text-align:center;">Our Products</h2>
+<section id="cart-section">
+  <h2 style="text-align:center;">Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <button class="btn" onclick="checkout()">Checkout</button>
+</section>
 
-    <div class="products">
+<footer>
+  © 2026 Pratiksha Herbals
+</footer>
 
-      <div class="product-card">
-        <img src="images/keshveda.jpg">
-        <h3>Keshveda Herbal Kaali-Mitti (Hair)</h3>
-      </div>
-
-      <div class="product-card">
-        <img src="images/orange.jpg">
-        <h3>Narang Orange Peel Powder</h3>
-      </div>
-
-      <div class="product-card">
-        <img src="images/nikhar.jpg">
-        <h3>Nikhar Herbal Face Pack</h3>
-      </div>
-
-      <div class="product-card">
-        <img src="images/neemveda.jpg">
-        <h3>Neemveda Neem Powder</h3>
-      </div>
-
-      <div class="product-card">
-        <img src="images/multani.jpg">
-        <h3>Multani Mitti Face Pack</h3>
-      </div>
-
-      <div class="product-card">
-        <img src="images/vibha.jpg">
-        <h3>Vibha Skin Detoxifier</h3>
-      </div>
-
-      <div class="product-card">
-        <img src="images/sanjivani.jpg">
-        <h3>Sanjivani Neem Face Pack</h3>
-      </div>
-
-      <div class="product-card">
-        <img src="images/somya.jpg">
-        <h3>Somya Herbal Face Pack</h3>
-      </div>
-
-      <div class="product-card">
-        <img src="images/sparsh.jpg">
-        <h3>Sparsh Summer Ubtan</h3>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section>
-    <h2 style="text-align:center;">About Us</h2>
-    <p style="text-align:center; max-width:600px; margin:auto;">
-      Pratiksha Herbals offers 100% natural and herbal beauty products
-      specially crafted for glowing skin and healthy hair.
-    </p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    © 2026 Pratiksha Herbals | All Rights Reserved
-  </footer>
+<script src="script.js"></script>
 
 </body>
 </html>
