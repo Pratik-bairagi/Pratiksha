@@ -1,92 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Pratiksha Herbals</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f7f3;
+  color: #333;
+}
 
-  <!-- Razorpay -->
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-</head>
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 
-<body>
+/* HERO */
+.hero {
+  height: 80vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('images/banner.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <h2>Pratiksha Herbals</h2>
-  <div>Cart 🛒 <span id="cart-count">0</span></div>
-</div>
+.hero h1 {
+  font-size: 48px;
+}
 
-<!-- HERO -->
-<div class="hero">
-  <div>
-    <h1>Glow Naturally with Herbal Care</h1>
-    <button class="btn">Shop Now</button>
-  </div>
-</div>
+/* BUTTON */
+.btn {
+  background: #6b8e23;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+}
 
-<!-- PRODUCTS -->
-<section>
-  <h2>Our Products</h2>
+/* PRODUCTS */
+.products-section {
+  padding: 60px 20px;
+  text-align: center;
+}
 
-  <div class="products">
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
 
-    <div class="product-card">
-      <h3>Keshveda Kaali Mitti</h3>
-      <button onclick="addToCart('Keshveda Kaali Mitti')" class="btn">Add to Cart</button>
-    </div>
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  transition: 0.3s;
+}
 
-    <div class="product-card">
-      <h3>Narang Orange Peel</h3>
-      <button onclick="addToCart('Orange Peel')" class="btn">Add to Cart</button>
-    </div>
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
 
-    <div class="product-card">
-      <h3>Nikhar Face Pack</h3>
-      <button onclick="addToCart('Nikhar Face Pack')" class="btn">Add to Cart</button>
-    </div>
+/* CHECKOUT */
+.checkout {
+  padding: 50px;
+  text-align: center;
+}
 
-    <div class="product-card">
-      <h3>Neemveda Powder</h3>
-      <button onclick="addToCart('Neemveda')" class="btn">Add to Cart</button>
-    </div>
+.checkout input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 250px;
+}
 
-    <div class="product-card">
-      <h3>Multani Mitti</h3>
-      <button onclick="addToCart('Multani Mitti')" class="btn">Add to Cart</button>
-    </div>
-
-  </div>
-</section>
-
-<!-- CHECKOUT -->
-<section>
-  <h2>Checkout</h2>
-
-  <form onsubmit="placeOrder(event)">
-    <input type="text" id="name" placeholder="Full Name" required><br>
-    <input type="text" id="phone" placeholder="Phone" required><br>
-    <input type="text" id="address" placeholder="Address" required><br>
-
-    <button type="submit" class="btn">Place Order</button>
-  </form>
-
-  <br>
-
-  <button onclick="payNow()" class="btn">Pay Online</button>
-  <button onclick="sendWhatsApp()" class="btn">Order on WhatsApp</button>
-
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 Pratiksha Herbals
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+/* FOOTER */
+footer {
+  background: #6b8e23;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
