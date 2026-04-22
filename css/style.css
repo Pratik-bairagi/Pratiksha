@@ -20,7 +20,7 @@ body {
 .hero {
   height: 80vh;
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-              url('images/banner.jpg') center/cover no-repeat;
+              url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFSJR6_y7JEvp-wMx3_XL-qfLsN4c16ZtyUQ&s') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
