@@ -1,47 +1,92 @@
-body {
-  font-family: Poppins, sans-serif;
-  margin: 0;
-  background: #f5f5dc;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pratiksha Herbals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background: white;
-}
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 
-.hero {
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: green;
-  color: white;
-}
+  <!-- Razorpay -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 20px;
-  padding: 20px;
-}
+<body>
 
-.product-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-}
+<!-- NAVBAR -->
+<div class="navbar">
+  <h2>Pratiksha Herbals</h2>
+  <div>Cart 🛒 <span id="cart-count">0</span></div>
+</div>
 
-.btn {
-  background: green;
-  color: white;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-}
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <h1>Glow Naturally with Herbal Care</h1>
+    <button class="btn">Shop Now</button>
+  </div>
+</div>
 
-#cart-section {
-  padding: 20px;
-}
+<!-- PRODUCTS -->
+<section>
+  <h2>Our Products</h2>
+
+  <div class="products">
+
+    <div class="product-card">
+      <h3>Keshveda Kaali Mitti</h3>
+      <button onclick="addToCart('Keshveda Kaali Mitti')" class="btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Narang Orange Peel</h3>
+      <button onclick="addToCart('Orange Peel')" class="btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Nikhar Face Pack</h3>
+      <button onclick="addToCart('Nikhar Face Pack')" class="btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Neemveda Powder</h3>
+      <button onclick="addToCart('Neemveda')" class="btn">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <h3>Multani Mitti</h3>
+      <button onclick="addToCart('Multani Mitti')" class="btn">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- CHECKOUT -->
+<section>
+  <h2>Checkout</h2>
+
+  <form onsubmit="placeOrder(event)">
+    <input type="text" id="name" placeholder="Full Name" required><br>
+    <input type="text" id="phone" placeholder="Phone" required><br>
+    <input type="text" id="address" placeholder="Address" required><br>
+
+    <button type="submit" class="btn">Place Order</button>
+  </form>
+
+  <br>
+
+  <button onclick="payNow()" class="btn">Pay Online</button>
+  <button onclick="sendWhatsApp()" class="btn">Order on WhatsApp</button>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Pratiksha Herbals
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
