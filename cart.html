@@ -1,1 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+</head>
+<body>
 
+<h2>Your Cart</h2>
+<p id="item"></p>
+
+<script>
+  document.getElementById("item").innerText =
+    localStorage.getItem("cartItem");
+</script>
+
+</body>
+</html>
